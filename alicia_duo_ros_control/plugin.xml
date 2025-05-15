@@ -1,0 +1,7 @@
+<library path="alicia_duo_ros_control">
+  <class name="alicia_duo_ros_control/AliciaHardwareInterface"
+         type="alicia_duo_ros_control::AliciaHardwareInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>ROS 2 Control hardware interface for Alicia robot.</description>
+  </class>
+</library>

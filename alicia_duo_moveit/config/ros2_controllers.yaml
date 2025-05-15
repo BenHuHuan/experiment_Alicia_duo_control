@@ -1,0 +1,41 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_controller:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_pos_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - Joint01
+        - Joint02
+        - Joint03
+        - Joint04
+        - Joint05
+        - Joint06
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+      gains:
+        Joint01: {p: 100.0, i: 1.0, d: 1.0}
+        Joint02: {p: 100.0, i: 1.0, d: 1.0}
+        Joint03: {p: 100.0, i: 1.0, d: 1.0}
+        Joint04: {p: 100.0, i: 1.0, d: 1.0}
+        Joint05: {p: 100.0, i: 1.0, d: 1.0}
+        Joint06: {p: 100.0, i: 1.0, d: 1.0}
+
+    gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - Grip_control
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+      gains:
+        Grip_control: {p: 100.0, i: 1.0, d: 1.0}
